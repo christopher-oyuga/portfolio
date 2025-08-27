@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (cvBtn) {
     cvBtn.addEventListener("click", () => {
       console.log("CV button clicked ✅");
-      window.open("docs/Christopher Oyuga.O c.v 2.4 .pdf", "_blank", "noopener,noreferrer");
+      window.open("docs/Christopher Oyuga.O cv.pdf", "_blank", "noopener,noreferrer");
     });
   }
 
