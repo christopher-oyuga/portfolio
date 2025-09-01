@@ -597,18 +597,18 @@ display: flex;
 }
 .Portfolio-layer h4{
     color: var(--background-color);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: 'quicksand';
 }
 .Portfolio-layer h4 span{
     color: var(--link-color);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Brush Script MT';
 }
 .Portfolio-layer p{
     color: darkorange;
     font-family: 'Viner Hand ITC';
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 2PX;
     margin: .3rem 0 1rem;
@@ -862,6 +862,115 @@ resize: none;
 #closePopup:hover {
   background: #0056b3;
 }
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.95);
+}
+
+.gallery-content {
+  margin: auto;
+  display: block;
+  max-width: 85%;
+  text-align: center;
+}
+
+.gallery-content img {
+  width: 100%;
+  max-width: 700px;
+  max-height: 70vh;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.gallery-thumbs {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.gallery-thumbs img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.gallery-thumbs img:hover {
+  border-color: #f39c12;
+  transform: scale(1.05);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.3s;
+  user-select: none;
+  border-radius: 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .gallery-content img {
+    width: 95%;
+    max-height: 60vh;
+  }
+  .gallery-thumbs img {
+    width: 60px;
+    height: 45px;
+  }
+  .prev, .next {
+    font-size: 22px;
+    padding: 8px;
+  }
+  .close {
+    font-size: 28px;
+    right: 15px;
+  }
+}
+
  /* =======================
    FOOTER STYLES
 ======================= */

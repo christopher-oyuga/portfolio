@@ -138,3 +138,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+let currentIndex = 0;
+const images = [
+  "img/web6-1.jpg",
+  "img/web6-2.jpg",
+  "img/web6-3.jpg",
+  "img/web6-4.jpg"
+];
+
+function openGallery() {
+  document.getElementById("galleryModal").style.display = "block";
+  currentIndex = 0;
+  updateImage();
+}
+
+function closeGallery() {
+  document.getElementById("galleryModal").style.display = "none";
+}
+
+function changeImage(src) {
+  document.getElementById("galleryImage").src = src;
+}
+
+function setImage(index) {
+  currentIndex = index;
+  updateImage();
+}
+
+function changeSlide(step) {
+  currentIndex += step;
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+  updateImage();
+}
+
+function updateImage() {
+  document.getElementById("galleryImage").src = images[currentIndex];
+}
