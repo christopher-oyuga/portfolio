@@ -597,18 +597,18 @@ display: flex;
 }
 .Portfolio-layer h4{
     color: var(--background-color);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'quicksand';
 }
 .Portfolio-layer h4 span{
     color: var(--link-color);
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-family: 'Brush Script MT';
 }
 .Portfolio-layer p{
     color: darkorange;
     font-family: 'Viner Hand ITC';
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 2PX;
     margin: .3rem 0 1rem;
@@ -622,7 +622,7 @@ display: flex;
     background: var(--background-color)
 }
 .Portfolio-layer i{
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: var(--background-color)
 }
 
@@ -733,7 +733,7 @@ font-weight: normal;
 .contact-section .group form input,
 .contact-section .group form textarea{
 font-family: 'nunito',sans-serif;
-border: 2px solid var(--link-color);
+border: 1px solid var(--link-color);
 background-color: transparent;
 padding: 10px;
 border-radius: 20px;
