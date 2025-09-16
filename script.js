@@ -144,7 +144,13 @@ const images = [
   "img/web6-1.jpg",
   "img/web6-2.jpg",
   "img/web6-3.jpg",
-  "img/web6-4.jpg"
+  "img/web6-4.jpg",
+  "img/web6-5.jpg",
+  "img/web6-6.jpg",
+  "img/web6-7.jpg",
+  "img/web6-8.jpg",
+  "img/web6-9.jpg",
+  "img/web6-10.jpg"
 ];
 
 function openGallery() {
@@ -176,3 +182,42 @@ function changeSlide(step) {
 function updateImage() {
   document.getElementById("galleryImage").src = images[currentIndex];
 }
+
+
+ // ==============================
+  // VIDEOS
+  // ==============================
+const project3 = document.getElementById("project3");
+const modal = document.getElementById("videoModal");
+const closeBtn = document.querySelector(".close");
+const videoContainer = document.getElementById("videoContainer");
+
+const leftArrow = document.querySelector(".arrow.left");
+const rightArrow = document.querySelector(".arrow.right");
+
+// Open modal
+project3.addEventListener("click", () => {
+  modal.style.display = "block";
+});
+
+// Close modal
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// Close when clicking outside
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+// Scroll with arrows (smooth)
+rightArrow.addEventListener("click", () => {
+  videoContainer.scrollBy({ left: 320, behavior: "smooth" });
+});
+
+leftArrow.addEventListener("click", () => {
+  videoContainer.scrollBy({ left: -320, behavior: "smooth" });
+});
+

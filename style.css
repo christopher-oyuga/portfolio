@@ -653,6 +653,107 @@ display: flex;
         height: 4rem;
     }
 }
+
+/* VIDEOS*/
+/* Modal background */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  overflow: auto;
+}
+
+/* Modal content */
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 20px;
+  background: #111;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 1000px;
+}
+
+/* Close button */
+.close {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Video scrolling container */
+.video-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;         /* horizontal scroll */
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+  scroll-behavior: smooth;  /* smooth scrolling */
+}
+
+.video-container video {
+  flex: 0 0 auto;           /* keep each video fixed size */
+  width: 300px;
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  user-select: none;
+  z-index: 1001;
+  transition: background-color 0.3s;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* Small screens: stack videos vertically */
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;  /* stack vertically */
+    overflow-x: hidden;      /* disable horizontal scroll */
+    overflow-y: auto;        /* vertical scroll */
+    max-height: 70vh;
+  }
+
+  .video-container video {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .arrow {
+    display: none;  /* hide arrows on small screens */
+  }
+}
+
+
 /* SECTION 4: Testimony */
 
 .testimony-section{
