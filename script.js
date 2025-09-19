@@ -150,7 +150,8 @@ const images = [
   "img/web6-7.jpg",
   "img/web6-8.jpg",
   "img/web6-9.jpg",
-  "img/web6-10.jpg"
+  "img/web6-10.jpg",
+  "img/web6-11.jpg"
 ];
 
 function openGallery() {
